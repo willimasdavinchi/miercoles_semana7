@@ -1,0 +1,66 @@
+<!-- Crear una galería de imágenes
+
+Todas las imágenes deben estar desaturada (en blanco y negro)
+ver: https://stackoverflow.com/questions/22994810/how-do-i-desaturate-and-saturate-an-image-using-css
+
+Al hacer click sobre la imágen esta debe recuperar su color con una transición
+de un segundo, al volver hacer click debe volver a estar en blanco y negro.
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    	.img__color {
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+			transition: 1s;
+    	}
+    	.img__color--active {
+    		filter: grayscale(0);
+    	}
+    </style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/abstract/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/city/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/people/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/animals/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/food/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/nature/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/business/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/nightlife/" alt=""><figcaption></figcaption></figure>
+			</div>
+			<div class="col-4">
+				<figure><img class="img__color" src="http://lorempixel.com/400/200/cats/" alt=""><figcaption></figcaption></figure>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+  		$("img").on("click", function(){
+    		$(this).toggleClass("img__color--active");
+    	})
+    </script>
+  </body>
+</html>
