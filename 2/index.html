@@ -59,6 +59,7 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 	</div>
 	<script type="text/javascript">
   		$("img").on("click", function(){
+  			$(".img__color--active").not(this).removeClass("img__color--active")
     		$(this).toggleClass("img__color--active");
     	})
     </script>
